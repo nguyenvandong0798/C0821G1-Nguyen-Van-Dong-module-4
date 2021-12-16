@@ -14,7 +14,7 @@
     <button type="submit" name="calculated" value="-">Subtraction(-)</button>
     <button type="submit" name="calculated" value="*">Multiplication(*)</button>
     <button type="submit" name="calculated" value="/">Division(/)</button>
-    <button type="submit">search</button>
+
 </form>
 </body>
 </html>

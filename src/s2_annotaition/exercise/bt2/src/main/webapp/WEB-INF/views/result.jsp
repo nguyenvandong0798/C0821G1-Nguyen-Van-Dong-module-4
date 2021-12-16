@@ -7,9 +7,7 @@
 </head>
 <body>
 <ul>
- <c:forEach var="con" items="${condiment}">
-     <li> ${con}</li>
- </c:forEach>
+<p> result: ${result}</p>
 </ul>
 </body>
 </html>

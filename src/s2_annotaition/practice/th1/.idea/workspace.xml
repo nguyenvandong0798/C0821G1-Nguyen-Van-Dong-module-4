@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="th11:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="868e8dee-296a-4e4d-b79f-294c31e9d75a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/controller/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/controller/StudentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/model/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/repository/IStudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/repository/impl/StudentRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/service/IStudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/java/com/codegym/service/impl/StudentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/views/hello.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/views/hi.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/views/student/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/views/student/detail.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/views/student/list.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/demo/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/ss2_spring_controller/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/ss2_spring_controller/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/ss2_spring_controller/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/ss2_spring_controller/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../reviews/ss2_spring_controller/ss2_spring_controller.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt1/src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt1/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt2/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt2/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../s1_web_backend_spring/exercise/bt2/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="c5a66aeb-6f5b-47c7-930c-e8ae616a92af" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../th4/src/main/java/com/codegym/controller/TimeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../th4/src/main/webapp/WEB-INF/configs/spring-config-mvc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../th4/src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../th4/th4.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../s1_web_backend_spring/practice/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../s1_web_backend_spring/practice/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,10 +36,25 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
-  <component name="ProjectId" id="22MIPVT4BhrrCBfla5WzpDGNC1z" />
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectId" id="22MIVDqOaP1vIKVh4S7GQcAUicP" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -50,28 +63,179 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/spring-time-zone-gradle" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="th11:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_th11" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="59922" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="th11:war" />
+        </option>
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="868e8dee-296a-4e4d-b79f-294c31e9d75a" name="Default Changelist" comment="" />
-      <created>1639641005674</created>
+      <changelist id="c5a66aeb-6f5b-47c7-930c-e8ae616a92af" name="Default Changelist" comment="" />
+      <created>1639641050261</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1639641005674</updated>
-      <workItem from="1639641008858" duration="45000" />
+      <updated>1639641050261</updated>
+      <workItem from="1639641053070" duration="1228000" />
+      <workItem from="1639642313627" duration="1644000" />
     </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="209" y="73" key="new project wizard" timestamp="1639641050204">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1639641933962">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="209" y="73" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1639641050204" />
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1639641933962" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1639644336688">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1639644336688" />
+    <state width="1024" height="193" key="GridCell.Tab.0.bottom" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.0.center" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.0.left" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.0.right" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.1.bottom" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.1.center" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.1.left" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.1.right" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.2.bottom" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.2.bottom/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.2.center" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.2.center/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.2.left" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.2.left/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state width="1024" height="193" key="GridCell.Tab.2.right" timestamp="1639642291198">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1024" height="193" key="GridCell.Tab.2.right/0.0.1536.824@0.0.1536.824" timestamp="1639642291198" />
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog" timestamp="1639641855024">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="299" y="67" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1639641855024" />
+    <state x="209" y="46" key="new project wizard" timestamp="1639644342458">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="46" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1639644342458" />
   </component>
 </project>
