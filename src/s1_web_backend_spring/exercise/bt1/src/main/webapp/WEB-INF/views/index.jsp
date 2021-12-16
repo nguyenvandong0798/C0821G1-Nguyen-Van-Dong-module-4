@@ -9,7 +9,6 @@
     <input type="number" name="usd" value="${usd}"> USD
     <input  value="${result}"> Result
     <input type = "submit" value="submit">
-
   </form>
   </body>
 </html>
