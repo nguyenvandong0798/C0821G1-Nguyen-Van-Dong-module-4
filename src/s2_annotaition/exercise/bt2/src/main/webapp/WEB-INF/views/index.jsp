@@ -6,7 +6,7 @@
 </head>
 <body>
 <form method="post" action="/calculator">
-    <h2> controller.Calculator</h2>
+    <h2> controller.CalculatorController</h2>
     <input type="number" name="number1" width="40px">
     <input type="number" name="number2" width="40px">
 
