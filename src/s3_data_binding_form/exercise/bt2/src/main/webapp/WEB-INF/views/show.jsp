@@ -1,0 +1,33 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<html>
+<head>
+    <title>Title</title>
+</head>
+<body>
+<p>${form.name}</p>
+<p>${form.birthday}</p>
+<p>${form.gender}</p>
+<p>${form.country}</p>
+<p>${form.idCard}</p>
+<p>${form.transferBy}</p>
+<p>${form.vehicleNumber}</p>
+<p>${form.seatNumber}</p>
+<p>${form.departAt}</p>
+<p>${form.arriveBy}</p>
+<p>${form.whereToGoIn14Days}</p>
+<p>${form.province}</p>
+<p>${form.district}</p>
+<p>${form.houseNumber}</p>
+<p>${form.phone}</p>
+<p>${form.email}</p>
+<p>${form.fever}</p>
+<p>${form.cough}</p>
+<p>${form.difficultyOfBreathing}</p>
+<p>${form.soreThroat}</p>
+<p>${form.vomiting}</p>
+<p>${form.skinHaemorrhage}</p>
+<p>${form.rash}</p>
+<p>${form.visitAny}</p>
+<p>${form.careFor}</p>
+</body>
+</html>
