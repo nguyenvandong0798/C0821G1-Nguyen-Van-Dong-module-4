@@ -5,12 +5,8 @@
 <body>
 
 </div>
-<form action="/blog/list" method="get">
-    <label>Name: </label>
-    <input name="name">
-    <button type="submit"></button>
-</form>
-<h1>Student List</h1>
+
+<h1>Blog List</h1>
 <p><a href="/blog/create">Create blog</a></p>
 <p style="color: blue" th:text="#{msg}"></p>
 <table border="1" style="width: 1000px">
@@ -30,9 +26,9 @@
         <td th:text="${blogObj.note}"></td>
 
         <!--            Request param-->
-        <td><a th:href="@{/blog/detail/(id = ${blogObj.id})}">Detail Student</a></td>
-        <!--            Path Variable-->
-        <td><a th:href="@{/blog/detail/{id}(id = ${blogObj.id})}">Detail Student</a></td>
+        <td><a th:href="@{/blog/detail/(id = ${blogObj.id})}">Detail Blog</a></td>
+        <td><a th:href="@{delete/{id}(id=${blogObj.getId()})}">Delete</a></td>
+        <td><a th:href="@{edit/{id}(id=${blogObj.getId()})}">Edit</a></td>
     </tr>
 </table>
 </body>

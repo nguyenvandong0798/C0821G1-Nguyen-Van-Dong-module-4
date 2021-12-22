@@ -8,9 +8,11 @@ public interface IBlogService {
 
     List<Blog> getAll();
 
+    List<Blog> findAll();
+
     Blog findById(Integer id);
 
     void save(Blog blog);
 
-    List<Blog> findByName(String name);
+    void remove(int id);
 }

@@ -12,22 +12,27 @@ public class BlogService implements IBlogService {
     @Autowired
     private IBlogRepository iBlogRepository;
     @Override
+    public List<Blog> findAll() {
+        return iBlogRepository.findAll();
+    }
     public List<Blog> getAll() {
         return iBlogRepository.findAll();
     }
 
     @Override
     public Blog findById(Integer id) {
-        return null;
+        return iBlogRepository.findById(id).orElse(null);
     }
 
     @Override
     public void save(Blog blog) {
-
+        iBlogRepository.save(blog);
     }
 
     @Override
-    public List<Blog> findByName(String name) {
-        return null;
+    public void remove(int id) {
+        Blog blog = iBlogRepository.getById(id);
+        iBlogRepository.delete(blog);
     }
+
 }
