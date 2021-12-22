@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efd686d3-852c-4f55-a449-3b63195f48d0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt2/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/configuration/AppConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/configuration/AppInitializer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/model/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/model/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/service/IProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/service/IProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/service/impl/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/classes/java/main/com/codegym/service/impl/HibernateProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/libs/untitled-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/build/libs/untitled-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/configuration/AppConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/configuration/AppConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/configuration/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/configuration/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/model/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/model/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/ProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/impl/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/repository/impl/BaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/java/com/codegym/service/impl/HibernateProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/webapp/WEB-INF/views/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/webapp/WEB-INF/views/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../s5_ORM/Exersice/bt/src/main/webapp/WEB-INF/views/list.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="22chOeu7oTOqmGGVWnM9vejxZlv" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efd686d3-852c-4f55-a449-3b63195f48d0" name="Default Changelist" comment="" />
+      <created>1640142751812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640142751812</updated>
+      <workItem from="1640142753098" duration="4000" />
+    </task>
+    <servers />
+  </component>
+</project>

@@ -2,31 +2,32 @@ package com.codegym.model;
 
 import javax.persistence.*;
 
-@Entity
-@Table
-public class Product implements Cloneable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
-    private int id;
-    @Column(name = "name")
-    private String name;
-    @Column(name = "price")
-    private String price;
-    @Column(name = "description")
-    private String description;
-    @Column(name = "nation")
-    private String nation;
+@Entity(name = "product")
+public class Product {
 
-    public Product(int id, String name, String price, String description, String nation) {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY )
+    @Column (name = "id")
+    private int id;
+    @Column (name = "name")
+    private String name;
+    @Column (name = "price")
+    private String price;
+    @Column (name = "description")
+    private String description;
+    @Column (name = "producer")
+    private String producer;
+
+
+    public Product() {
+    }
+
+    public Product(int id, String name, String price, String description, String producer) {
         this.id = id;
         this.name = name;
         this.price = price;
         this.description = description;
-        this.nation = nation;
-    }
-
-    public Product() {
+        this.producer = producer;
     }
 
     public int getId() {
@@ -61,13 +62,11 @@ public class Product implements Cloneable {
         this.description = description;
     }
 
-    public String getNation() {
-        return nation;
+    public String getProducer() {
+        return producer;
     }
 
-    public void setNation(String nation) {
-        this.nation = nation;
+    public void setProducer(String producer) {
+        this.producer = producer;
     }
-
-
 }
