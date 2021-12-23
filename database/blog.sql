@@ -3,7 +3,7 @@ create database blog_manager;
 use blog_manager;
 
 create table blog_manager(
-	id int primary key ,
+	id int primary key auto_increment,
     name varchar(40),
 	content varchar(40),
 	note varchar(40)

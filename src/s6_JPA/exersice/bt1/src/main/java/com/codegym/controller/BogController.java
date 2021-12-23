@@ -19,7 +19,7 @@ public class BogController {
     @Qualifier("blogService")
     private IBlogService iBlogService;
 
-    @GetMapping(value = {"list", ""})
+    @GetMapping(value = {"list"})
     public ModelAndView listPage(){
         return new ModelAndView
                 ("blog/list_blog","blogs", iBlogService.getAll());
@@ -64,8 +64,8 @@ public class BogController {
     @PostMapping(value = "/edit")
     public String edit(@ModelAttribute(value = "blog") Blog blog,RedirectAttributes redirectAttributes){
         iBlogService.save(blog);
-        List<Blog> blogs =iBlogService.findAll();
-        redirectAttributes.addFlashAttribute("blog",blogs);
+//        List<Blog> blogs =iBlogService.findAll();
+//        redirectAttributes.addFlashAttribute("blog",blogs);
         return "redirect:/blog/list";
     }
 }

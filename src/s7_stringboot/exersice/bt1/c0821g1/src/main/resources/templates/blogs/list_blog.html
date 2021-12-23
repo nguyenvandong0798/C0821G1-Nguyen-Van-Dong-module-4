@@ -1,0 +1,37 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+</div>
+
+<h1>Blog List</h1>
+<p><a href="/blogs/create">Create blog</a></p>
+<p style="color: blue" th:text="#{msg}"></p>
+<table border="1" style="width: 1000px">
+    <tr>
+        <th>No</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Content</th>
+        <th>Note</th>
+        <th>NameCategory</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="blogObj,iter : ${blogs}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="${blogObj.id}"></td>
+        <td th:text="${blogObj.name}"></td>
+        <td th:text="${blogObj.content}"></td>
+        <td th:text="${blogObj.note}"></td>
+        <td th:text="${blogObj.category.name}"></td>
+
+        <!--            Request param-->
+        <td><a th:href="@{/blog/detail/(id = ${blogObj.id})}">Detail Blog</a></td>
+        <td><a th:href="@{delete/{id}(id=${blogObj.getId()})}">Delete</a></td>
+        <td><a th:href="@{edit/{id}(id=${blogObj.getId()})}">Edit</a></td>
+    </tr>
+</table>
+</body>
+</html>
