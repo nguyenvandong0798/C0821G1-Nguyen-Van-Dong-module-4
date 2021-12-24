@@ -4,6 +4,9 @@ import com.codegym.model.Blog;
 import com.codegym.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -62,7 +65,7 @@ public class BogController {
     }
 
     @PostMapping(value = "/edit")
-    public String edit(@ModelAttribute(value = "blog") Blog blog,RedirectAttributes redirectAttributes){
+    public String edit(@ModelAttribute(value = "blog") Blog blog,RedirectAttributes redirectAttributes) {
         iBlogService.save(blog);
 //        List<Blog> blogs =iBlogService.findAll();
 //        redirectAttributes.addFlashAttribute("blog",blogs);

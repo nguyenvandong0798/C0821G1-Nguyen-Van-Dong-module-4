@@ -9,13 +9,6 @@
 <h1>Blog List</h1>
 <p><a href="/blogs/create">Create blog</a></p>
 <p style="color: blue" th:text="#{msg}"></p>
-
-<form action="/blogs/search" method="get">
-    <label>Name: </label>
-    <input name="name">
-    <button type="submit">Search</button>
-</form>
-
 <table border="1" style="width: 1000px">
     <tr>
         <th>No</th>
@@ -26,7 +19,7 @@
         <th>NameCategory</th>
         <th colspan="2">Action</th>
     </tr>
-    <tr th:each="blogObj,iter : ${blogs}">
+    <tr th:each="blogObj,iter : ${blogPage}">
         <td th:text="${iter.count}"></td>
         <td th:text="${blogObj.id}"></td>
         <td th:text="${blogObj.name}"></td>
@@ -40,5 +33,18 @@
         <td><a th:href="@{edit/{id}(id=${blogObj.getId()})}">Edit</a></td>
     </tr>
 </table>
+<span>
+    <a th:if="${blogPage.hasPrevious()}" th:href="@{/blogs/list-page(page = ${blogPage.number - 1})}">
+        Previous
+    </a>
+     <a th:if="${blogPage.hasNext()}" th:href="@{/blogs/list-page(page = ${blogPage.number + 1})}">
+        Next
+    </a>
+    <p>
+        <span th:each="pageNo: ${#numbers.sequence(0,blogPage.totalPages - 1)}">
+            <a th:href="@{/blogs/list-page(page = ${pageNo})}" th:text="${pageNo}"></a>
+        </span>
+    </p>
+</span>
 </body>
 </html>
