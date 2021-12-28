@@ -1,0 +1,48 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Title</title>
+</head>
+<body>
+
+</div>
+
+<h1>Book List</h1>
+<p><a href="/book/create">Create book</a></p>
+<p style="color: blue" th:text="#{msg}"></p>
+
+<form action="/book/search" method="get">
+    <label>Name: </label>
+    <input name="name">
+    <button type="submit">Search</button>
+</form>
+
+<table border="1" style="width: 1000px">
+    <tr>
+        <th>No</th>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Year</th>
+        <th>quantity</th>
+        <th>Code-Book</th>
+        <th>Borrow-Book</th>
+        <th>Return-Book</th>
+        <th colspan="2">Action</th>
+    </tr>
+    <tr th:each="bookObj,iter : ${books}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="${bookObj.id}"></td>
+        <td th:text="${bookObj.name}"></td>
+        <td th:text="${bookObj.year}"></td>
+        <td th:text="${bookObj.quantity}"></td>
+        <td th:text="${bookObj.code.code}"></td>
+
+        <!--            Request param-->
+        <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">borrow</a></td>
+        <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">return</a></td>
+        <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">Detail Blog</a></td>
+        <td><a th:href="@{delete/{id}(id=${bookObj.getId()})}">Delete</a></td>
+        <td><a th:href="@{edit/{id}(id=${bookObj.getId()})}">Edit</a></td>
+    </tr>
+</table>
+</body>
+</html>

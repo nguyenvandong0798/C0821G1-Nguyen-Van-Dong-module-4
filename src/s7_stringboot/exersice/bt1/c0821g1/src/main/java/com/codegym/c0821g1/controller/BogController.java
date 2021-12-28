@@ -2,6 +2,7 @@ package com.codegym.c0821g1.controller;
 
 import com.codegym.c0821g1.model.Blog;
 import com.codegym.c0821g1.service.IBlogService;
+import com.codegym.c0821g1.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.domain.Page;
