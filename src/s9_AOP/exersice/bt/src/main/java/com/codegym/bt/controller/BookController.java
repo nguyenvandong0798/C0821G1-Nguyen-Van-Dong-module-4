@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 @Controller
-@RequestMapping(name = "book")
+@RequestMapping("book")
 public class BookController {
     @Autowired
     @Qualifier("bookService")
@@ -22,7 +22,7 @@ public class BookController {
     @Autowired
     private ICodeService iCodeService;
 
-    @GetMapping(value = {"list"})
+    @GetMapping(value = "list")
     public ModelAndView listPage(){
         return new ModelAndView
                 ("book/list_book","books", iBookService.getAll());
@@ -79,5 +79,9 @@ public class BookController {
         List<Book> bookList = iBookService.findByName(name);
         model.addAttribute("books", bookList);
         return "book/search_book";
+    }
+    @ExceptionHandler(Exception.class)
+    public String handelException(){
+        return "book/test";
     }
 }

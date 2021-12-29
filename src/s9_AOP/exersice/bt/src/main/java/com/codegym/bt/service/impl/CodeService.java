@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+
 @Service(value = "codeService")
 public class CodeService implements ICodeService {
     @Autowired
@@ -24,12 +25,6 @@ public class CodeService implements ICodeService {
     }
 
     @Override
-    public List<Code> findByCode(Integer code) {
-//        return iCodeRepository.getByCode("%"+code+"%");
-        return null;
-    }
-
-    @Override
     public Code findById(Integer id) {
         return iCodeRepository.findById(id).orElse(null);
     }
@@ -41,7 +36,7 @@ public class CodeService implements ICodeService {
 
     @Override
     public void remove(int id) {
-       Code  code = iCodeRepository.getById(id);
+       Code code = iCodeRepository.getById(id);
         iCodeRepository.delete(code);
     }
 }

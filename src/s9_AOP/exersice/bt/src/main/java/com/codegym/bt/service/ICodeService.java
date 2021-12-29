@@ -9,8 +9,6 @@ public interface ICodeService {
 
     List<Code> findAll();
 
-    List<Code> findByCode(Integer code);
-
     Code findById(Integer id);
 
     void save(Code code);
