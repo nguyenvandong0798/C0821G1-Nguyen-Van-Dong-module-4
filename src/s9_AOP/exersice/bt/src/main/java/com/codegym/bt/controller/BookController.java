@@ -1,6 +1,7 @@
 package com.codegym.bt.controller;
 
 import com.codegym.bt.model.Book;
+import com.codegym.bt.model.Code;
 import com.codegym.bt.service.IBookService;
 import com.codegym.bt.service.ICodeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import java.util.ArrayList;
 import java.util.List;
 @Controller
 @RequestMapping("book")
@@ -27,6 +29,7 @@ public class BookController {
         return new ModelAndView
                 ("book/list_book","books", iBookService.getAll());
     }
+
 
     @GetMapping(value = "detail")
     public String getBlogDetailRequestParam(@RequestParam(name = "id") Integer id,
@@ -80,8 +83,44 @@ public class BookController {
         model.addAttribute("books", bookList);
         return "book/search_book";
     }
-    @ExceptionHandler(Exception.class)
-    public String handelException(){
-        return "book/test";
+//    @ExceptionHandler(Exception.class)
+//    public String handelException(){
+//        return "book/test";
+//    }
+
+    @GetMapping("/browser")
+    public String browser(@RequestParam (name = "id") Integer id ,Model model){
+        Book book = iBookService.findByIdDecrease(id);
+        iBookService.save(book);
+        Code code = iBookService.random(book);
+        List<Book> books = iBookService.getAll();
+
+        model.addAttribute("books", books);
+        model.addAttribute("code", code.getCodee());
+        return "book/list_book";
+    }
+
+    @GetMapping("/return")
+    public String returnBook (@RequestParam (name = "id") Integer id, Model model){
+        Book book = iBookService.findById(id);
+        model.addAttribute("book", book);
+        return "book/returnn";
+    }
+
+    @PostMapping("/return")
+    public String search (@RequestParam(name = "id") Integer id,
+                          @RequestParam (name= "search") Integer search, Model model){
+
+        Book book = iBookService.findById(id);
+        for (Code code:iCodeService.findAll()) {
+            if (code.getCodee()==search){
+                book.setQuantity(book.getQuantity()+1);
+                iBookService.save(book);
+            }
+        }
+        List<Book> books =new ArrayList<>();
+        books.add(book);
+        model.addAttribute("books", books);
+        return "book/list_book";
     }
 }

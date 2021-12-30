@@ -15,7 +15,9 @@
     <input name="name">
     <button type="submit">Search</button>
 </form>
-
+<div>
+    <span>Your card Borrow Code is:<span th:text="${code}"></span></span>
+</div>
 <table border="1" style="width: 1000px">
     <tr>
         <th>No</th>
@@ -23,7 +25,6 @@
         <th>Name</th>
         <th>Year</th>
         <th>quantity</th>
-        <th>Code-Book</th>
         <th>Borrow-Book</th>
         <th>Return-Book</th>
         <th colspan="2">Action</th>
@@ -34,11 +35,10 @@
         <td th:text="${bookObj.name}"></td>
         <td th:text="${bookObj.year}"></td>
         <td th:text="${bookObj.quantity}"></td>
-        <td th:text="${bookObj.code.code}"></td>
 
         <!--            Request param-->
-        <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">borrow</a></td>
-        <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">return</a></td>
+        <td><a th:href="@{/book/browser/(id = ${bookObj.id})}">borrow</a></td>
+        <td><a th:href="@{/book/return/(id = ${bookObj.id})}">return</a></td>
         <td><a th:href="@{/book/detail/(id = ${bookObj.id})}">Detail Blog</a></td>
         <td><a th:href="@{delete/{id}(id=${bookObj.getId()})}">Delete</a></td>
         <td><a th:href="@{edit/{id}(id=${bookObj.getId()})}">Edit</a></td>

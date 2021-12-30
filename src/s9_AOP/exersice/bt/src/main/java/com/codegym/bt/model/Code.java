@@ -1,7 +1,6 @@
 package com.codegym.bt.model;
 
 import javax.persistence.*;
-import java.util.Set;
 
 @Entity(name = "code")
 public class Code {
@@ -11,17 +10,18 @@ public class Code {
     private Integer id;
 
     @Column(name = "code")
-    private Integer code;
+    private Integer codee;
 
-    @OneToMany(mappedBy = "code")
-    private Set<Book> books;
+    @ManyToOne()
+    @JoinColumn(name = "code_id")
+    private Book book;
 
-    public Set<Book> getBooks() {
-        return books;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBooks(Set<Book> books) {
-        this.books = books;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public Code() {
@@ -29,7 +29,7 @@ public class Code {
 
     public Code(Integer id, Integer code) {
         this.id = id;
-        this.code = code;
+        this.codee = code;
     }
 
     public Integer getId() {
@@ -40,12 +40,12 @@ public class Code {
         this.id = id;
     }
 
-    public Integer getCode() {
-        return code;
+    public Integer getCodee() {
+        return codee;
     }
 
-    public void setCode(Integer code) {
-        this.code = code;
+    public void setCodee(Integer codee) {
+        this.codee = codee;
     }
 
 }

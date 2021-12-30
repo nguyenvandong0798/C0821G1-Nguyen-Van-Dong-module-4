@@ -23,7 +23,7 @@
     <tr th:each="codeObj,iter : ${codes}">
         <td th:text="${iter.count}"></td>
         <td th:text="${codeObj.id}"></td>
-        <td th:text="${codeObj.code}"></td>
+        <td th:text="${codeObj.codee}"></td>
 
         <!--            Request param-->
         <td><a th:href="@{/code/detail/(id = ${codeObj.id})}">borrow</a></td>

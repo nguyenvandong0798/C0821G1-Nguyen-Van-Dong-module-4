@@ -15,12 +15,6 @@
     <p>Note</p>
     <input th:field="*{quantity}"/>
     <p>category</p>
-    <select th:field="*{code}">
-        <option th:each="cate :${code} " th:value="${cate.id}" th:text="${cate.code}">
-
-        </option>
-    </select>
-
     <button type="submit">Create</button>
 </form>
 </body>

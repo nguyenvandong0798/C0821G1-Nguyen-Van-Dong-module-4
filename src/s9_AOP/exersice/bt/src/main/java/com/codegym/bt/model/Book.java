@@ -1,11 +1,13 @@
 package com.codegym.bt.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "book")
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "code_id")
     private int id;
 
     @Column(name = "name")
@@ -15,32 +17,31 @@ public class Book {
     private String year;
 
     @Column(name = "quantity")
-    private String quantity;
+    private Integer quantity;
 
-    @ManyToOne
-    @JoinColumn(name = "code_id")
-    private Code code;
+    @OneToMany(mappedBy = "book", cascade = CascadeType.REMOVE)
+    private Set<Code> codes;
 
-    public Code getCode() {
-        return code;
+    public Set<Code> getCodes() {
+        return codes;
     }
 
-    public void setCode(Code code) {
-        this.code = code;
+    public void setCodes(Set<Code> codes) {
+        this.codes = codes;
     }
 
     public Book() {
     }
 
-    public Book(int id, String name, String year, String quantity, Code code) {
+    public Book(int id, String name, String year, Integer quantity, Set<Code> codes) {
         this.id = id;
         this.name = name;
         this.year = year;
         this.quantity = quantity;
-        this.code = code;
+        this.codes = codes;
     }
 
-    public Book(int id, String title, String year, String quantity) {
+    public Book(int id, String title, String year, Integer quantity) {
         this.id = id;
         this.name = title;
         this.year = year;
@@ -71,11 +72,11 @@ public class Book {
         this.year = year;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 }

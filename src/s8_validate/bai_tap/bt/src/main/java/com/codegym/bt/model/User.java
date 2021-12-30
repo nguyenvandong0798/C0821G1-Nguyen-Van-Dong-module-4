@@ -11,20 +11,13 @@ import javax.persistence.Id;
 import javax.validation.constraints.*;
 
 @Entity
-public class User implements Validator {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank(message = "name is not empty")
-    @Size(min = 5, max = 45, message = "length of name is 5-45")
     private String firstName;
-    @NotBlank(message = "name is not empty")
-    @Size(min = 5, max = 45, message = "length of name is 5-45")
     private String lastName;
-    @PhoneConstraint(message = "phone is wrong format")
     private String phone;
-    @NotNull
-    @Min(18) @Max(100)
     private int age;
     private String email;
 
@@ -89,16 +82,4 @@ public class User implements Validator {
         this.email = email;
     }
 
-    @Override
-    public boolean supports(Class<?> clazz) {
-        return com.codegym.bt.model.User.class.isAssignableFrom(clazz);
-    }
-
-    @Override
-    public void validate(Object target, Errors errors) {
-        com.codegym.bt.model.User user = (com.codegym.bt.model.User) target;
-        if (!user.email.matches("^[a-zA-Z0-9_!#$%&'*+/=?`{|}~^.-]+@[a-zA-Z0-9.-]+.[a-z]{2,6}$")) {
-            errors.rejectValue("email", "email.invalidFormat");
-        }
-    }
 }
