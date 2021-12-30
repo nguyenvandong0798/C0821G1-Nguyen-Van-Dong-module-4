@@ -83,10 +83,6 @@ public class BookController {
         model.addAttribute("books", bookList);
         return "book/search_book";
     }
-//    @ExceptionHandler(Exception.class)
-//    public String handelException(){
-//        return "book/test";
-//    }
 
     @GetMapping("/browser")
     public String browser(@RequestParam (name = "id") Integer id ,Model model){
@@ -111,10 +107,10 @@ public class BookController {
     public String search (@RequestParam(name = "id") Integer id,
                           @RequestParam (name= "search") Integer search, Model model){
 
-        Book book = iBookService.findById(id);
+        Book book = iBookService.findByIdIncrease(id);
         for (Code code:iCodeService.findAll()) {
             if (code.getCodee()==search){
-                book.setQuantity(book.getQuantity()+1);
+                book.setQuantity(book.getQuantity());
                 iBookService.save(book);
             }
         }
@@ -123,4 +119,10 @@ public class BookController {
         model.addAttribute("books", books);
         return "book/list_book";
     }
+
+    @ExceptionHandler(Exception.class)
+    public String handelException(){
+        return "book/test";
+    }
+
 }

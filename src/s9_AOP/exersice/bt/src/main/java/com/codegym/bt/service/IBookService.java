@@ -21,6 +21,7 @@ public interface IBookService {
     Book findByIdDecrease(Integer id);
 
     Book findByIdIncrease(Integer id);
+
     Code random(Book book);
 
 }
