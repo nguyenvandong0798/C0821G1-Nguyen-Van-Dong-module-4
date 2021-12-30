@@ -44,7 +44,7 @@
     </tr>
     <tr>
         <th scope="row">Total</th>
-        <td colspan="1"></td>
+        <td th:text="${cart.countProductQuantity()}"></td>
         <td th:text="${cart.countTotalPayment()}"></td>
     </tr>
     </tbody>
