@@ -31,6 +31,16 @@ public class ProductController {
         return modelAndView;
     }
 
+
+    @GetMapping(value = "/detail")
+    public String getBlogDetailRequestParam(@RequestParam(name = "id") Long id,
+                                            Model model) {
+        Product product = productService.getById(id);
+        model.addAttribute("products", product);
+//        model.addAttribute("product", productService.findAll());
+        return "/detail_product";
+    }
+
     @GetMapping("/add/{id}")
     public String addToCart(@PathVariable Long id, @ModelAttribute Cart cart, @RequestParam("action") String action) {
         Optional<Product> productOptional = productService.findById(id);
@@ -45,21 +55,9 @@ public class ProductController {
             cart.decProduct(productOptional.get());
             return "redirect:/shopping-cart";
         }
-        cart.addProduct(productOptional.get());
-        return "redirect:/shop";
+        if (action.equals("list"))
+            cart.addProduct(productOptional.get());
+        return "redirect:/detail";
     }
-    @GetMapping(value = "detail")
-    public String getBlogDetailRequestParam(@RequestParam(name = "id") Long id,
-                                            Model model) {
-        Product product = productService.getById(id);
-        model.addAttribute("products", product);
-        return "/detail_product";
-    }
-    @GetMapping(value = "/delete/{id}")
-    public String delete(@PathVariable Long id, RedirectAttributes redirectAttributes){
-        productService.remove(id);
-        List<Product> products = productService.findAllL();
-        redirectAttributes.addFlashAttribute("products",products);
-        return "redirect:/shop";
-    }
+
 }

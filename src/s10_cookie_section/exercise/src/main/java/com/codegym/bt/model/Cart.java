@@ -74,4 +74,7 @@ public class Cart {
         }
         return payment;
     }
+
+    public void setProducts(HashMap<Object, Object> objectObjectHashMap) {
+    }
 }

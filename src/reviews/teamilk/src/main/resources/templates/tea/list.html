@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>list</title>
+</head>
+<body>
+<form action="/tea/create" method="get">
+<button type="submit">create</button>
+</form>
+<h1>Tea milk</h1>
+<table border="1px" style="width: 1000px">
+    <tr>
+        <th>No</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Size</th>
+        <th colspan="2">More</th>
+    </tr>
+    <tr th:each="tea, iter: ${tea}">
+        <td th:text="${iter.count}"></td>
+        <td th:text="${tea.id}"></td>
+        <td th:text="${tea.name}"></td>
+        <td th:text="${tea.price}"></td>
+        <td th:text="${tea.category.size}"></td>
+        <td><a th:href="@{/tea/detail/(id = ${tea.id})}">Detail</a></td>
+    </tr>
+</table>
+</body>
+</html>

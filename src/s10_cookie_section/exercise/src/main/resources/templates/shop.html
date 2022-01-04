@@ -13,26 +13,30 @@
 <div class="container">
     <h2>Shop</h2>
     <p><a href="/shopping-cart">Your cart</a></p>
+    <p><a href="/pay">Payment</a></p>
     <table class="table table-bordered">
         <thead>
         <tr>
+            <th>Image</th>
             <th>Name</th>
-            <th>Description</th>
             <th>Price</th>
+            <th>Description</th>
             <th>Add To Cart</th>
             <th>View</th>
-            <th>Delete</th>
+<!--            <th>Delete</th>-->
         </tr>
         </thead>
         <tbody>
         <th:block th:each="product:${products}">
             <tr>
+                <td><img src="https://cdnimg.vietnamplus.vn/uploaded/xtsqr/2021_09_15/iphone13promax1.jpeg" width="100px" height="100px">
+                </td>
                 <td th:text="${product.name}"></td>
                 <td th:text="${product.price}"></td>
                 <td th:text="${product.description}"></td>
                 <td><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></td>
                 <td><a th:href="@{/detail/(id = ${product.id})}">Detail Cart</a></td>
-                <td><a style="color:red" th:href="@{delete/{id}(id=${product.getId()})}">Delete</a></td>
+<!--                <td><a style="color:red" th:href="@{delete/{id}(id=${product.getId()})}">Delete</a></td>-->
             </tr>
         </th:block>
         </tbody>
