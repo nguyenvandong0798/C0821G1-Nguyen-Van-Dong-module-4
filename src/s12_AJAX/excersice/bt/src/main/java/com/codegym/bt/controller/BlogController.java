@@ -20,7 +20,7 @@ public class BlogController {
     @Qualifier("IBlogService")
     private IBlogService iBlogService;
 
-    @GetMapping
+    @GetMapping("/list")
     public ResponseEntity<List<Blog>> findAllBlog() {
         List<Blog> blogs =iBlogService.getAll();
         if (blogs.isEmpty()) {

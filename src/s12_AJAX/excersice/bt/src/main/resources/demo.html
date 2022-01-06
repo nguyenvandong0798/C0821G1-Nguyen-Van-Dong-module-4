@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn sử dụng AJAX</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <div class="row">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>STT</th>
+                <th>Title</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        //dòng này minh dùng để load data
+        LoadData();
+    });
+
+    //hàm để load data
+    // ở đây mình có sử dụng dùng công chuỗi các tr khi chạy qua từng bản ghi
+    //
+    function LoadData() {
+        $.ajax({
+            url: 'https://jsonplaceholder.typicode.com/posts',
+            type: 'GET',
+            success: function(rs) {
+                var str = "";
+                $.each(rs, function(i, item) {
+                    str += "<tr>";
+                    str += "<td>" + (i + 1) + "</td>";
+                    str += "<td>" + item.title + "</td>";
+                    str += "<td><a class='btn btn-success btnView' data-id='" + item.id + "'>Xem</a></td>";
+                    str += "</tr>";
+
+                });
+                // id của thẻ tbody để hiển thị tất cả cá tr ra
+                $('#load_data').html(str);
+            }
+        });
+    }
+</script>
+</body>
+</html>

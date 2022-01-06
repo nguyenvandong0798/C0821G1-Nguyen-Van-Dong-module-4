@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+<table >
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>content</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+    LoadData();
+    });
+
+        //     $.ajax({
+        //         contentType: "application/json",
+        //         url: "/blog",
+        //         type: "GET",
+        //         success: function () {
+        //             LoadData();
+        //             console.log("thanh cong")
+        //         },
+        //         error: function () {
+        //             console.log("khong thanh cong")
+        //         },
+        //     })
+        // })
+        // function table() {
+        //     $("#table1").html("<tr>\n" +
+        //         "        <th>id</th>\n" +
+        //         "        <th>name</th>\n" +
+        //         "        <th>content</th>\n" +
+        //         "    </tr>");
+        //     let row = "";
+        //     for (let i = 0; i < list.length; i++){
+        //         row+="<tr>\n" +
+        //             "    <td>"+list[i].id+"</td>\n" +
+        //             "    <td>"+list[i].name+"</td>\n" +
+        //             "    <td>"+list[i].content+"</td>\n" +
+        //             "</tr>"
+        //     }
+        //     $("#table1").append(row);
+        // }
+        function LoadData() {
+            $.ajax({
+                url: 'https://localhost:8080/blog',
+                type: 'GET',
+                success: function (rs) {
+                    let str = "";
+                    $.each(rs, function (item) {
+                        str += "<tr>";
+                        str += "<td>" + item.id + "</td>";
+                        str += "<td>" + item.name + "</td>";
+                        str += "<td>" + item.content + "</td>";
+                        str += "</tr>";
+
+                    });
+                    // id của thẻ tbody để hiển thị tất cả cá tr ra
+                    $('#load_data').html(str);
+                }
+            });
+        }
+
+</script>
+</body>
+</html>
