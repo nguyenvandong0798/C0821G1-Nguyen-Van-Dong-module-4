@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+    <title>Customer Detail</title>
+</head>
+<body>
+<h2>Customer Of Furama</h2>
+<div class="card" style="width: 18rem;">
+    <img src="https://bazantravel.com/cdn/medias/uploads/53/53114-furama-resort-da-nang-11.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title" th:text="${customer.id}"></h5>
+        <h5 class="card-title" th:text="${customer.name}"></h5>
+        <h5 class="card-title" th:text="${customer.birthday}"></h5>
+        <h5 class="card-title" >
+            </td>
+            <td th:if="${customer.gender}==1">Nam</td>
+            <td th:if="${customer.gender}==0">Nữ</td>
+            </td>
+        </h5>
+        <h5 class="card-title" th:text="${customer.idCard}"></h5>
+        <h5 class="card-title" th:text="${customer.phone}"></h5>
+        <h5 class="card-title" th:text="${customer.email}"></h5>
+        <h5 class="card-title" th:text="${customer.address}"></h5>
+        <h5 class="card-title" th:text="${customer.customerType.name}"></h5>
+        <a href="/customer/list" class="btn btn-primary">List Customer</a>
+<!--        <td><a class="btn btn-primary"th:href="@{/add/{id}/(action='list', id = ${products.id})}">Add shop-cart</a>-->
+    </div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</html>
