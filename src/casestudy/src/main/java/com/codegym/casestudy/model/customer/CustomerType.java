@@ -12,7 +12,7 @@ public class CustomerType {
     @Column(name = "ten_loai_khach")
     private String name;
 
-    @OneToMany(mappedBy = "customerType")
+    @OneToMany(mappedBy = "customerType", cascade = CascadeType.ALL)
     private Set<Customer> customers;
 
     public CustomerType(Integer id, String name, Set<Customer> customers) {

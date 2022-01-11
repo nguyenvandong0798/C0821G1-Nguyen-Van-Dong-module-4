@@ -10,7 +10,7 @@
 <body>
 <div class="container-fluid">
     <div class="text-center"><h3>Add New Customer</h3></div></div>
-<form action="/customer/create" method="post" th:object="${customer}"
+<form action="/employee/create" method="post" th:object="${employee}"
       style="max-width: 500px; margin: 0 auto; ">
     <div class="border badge-secondary rounded p-3">
         <div class="form-group row">
@@ -21,40 +21,43 @@
             <label class="col-sm-4 col-form-label">Name</label>
             <div class="col-sm-8">
                 <input type="text" th:field="*{name}">
-                <p style="color:red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
             </div>
             <label class="col-sm-4 col-form-label">Birth day</label>
             <div class="col-sm-8">
-                <input type="text" th:field="*{birthday}">
+                <input type="text" th:field="*{birthDay}">
             </div>
-            <label class="col-sm-4 col-form-label">Gender</label>
-            <div class="col-sm-8">
-                <input type="text" th:field="*{gender}" placeholder="1 is Male & 0 is Female">
-            </div>
-            <label class="col-sm-4 col-form-label">Code</label>
+            <label class="col-sm-4 col-form-label">ID Card</label>
             <div class="col-sm-8">
                 <input type="text" th:field="*{idCard}">
-                <p style="color:red" th:if="${#fields.hasErrors('idCard')}" th:errors="*{idCard}"></p>
             </div>
             <label class="col-sm-4 col-form-label">Phone</label>
             <div class="col-sm-8">
                 <input type="text" th:field="*{phone}">
-                <p style="color:red" th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"></p>
             </div>
             <label class="col-sm-4 col-form-label">Email</label>
             <div class="col-sm-8">
                 <input type="text" th:field="*{email}">
-                <p style="color:red" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></p>
             </div>
             <label class="col-sm-4 col-form-label">Address</label>
             <div class="col-sm-8">
                 <input type="text" th:field="*{address}">
-                <p style="color:red" th:if="${#fields.hasErrors('address')}" th:errors="*{address}"></p>
             </div>
-            <label class="col-sm-4 col-form-label">Type</label>
+            <label class="col-sm-4 col-form-label">Position</label>
             <div class="col-sm-8">
-                <select th:field="*{customerType}">
-                    <option th:each="type: ${customerType}" th:value="${type.id}" th:text="${type.name}"></option>
+                <select th:field="*{position}">
+                    <option th:each="pos: ${position}" th:value="${pos.idPosition}" th:text="${pos.namePosition}"></option>
+                </select>
+            </div>
+            <label class="col-sm-4 col-form-label">Skill</label>
+            <div class="col-sm-8">
+                <select th:field="*{skill}">
+                    <option th:each="ski: ${skill}" th:value="${ski.idSkill}" th:text="${ski.nameSkill}"></option>
+                </select>
+            </div>
+            <label class="col-sm-4 col-form-label">Department</label>
+            <div class="col-sm-8">
+                <select th:field="*{department}">
+                    <option th:each="dep: ${department}" th:value="${dep.idDepartment}" th:text="${dep.nameDepartment}"></option>
                 </select>
             </div>
             <label class="col-sm-4 col-form-label"></label>

@@ -1,6 +1,13 @@
 package com.codegym.casestudy.model.customer;
 
+import com.codegym.casestudy.common.email.EmailConstraint;
+import com.codegym.casestudy.common.idcard.IdCardConstraint;
+import com.codegym.casestudy.common.phone.PhoneConstraint;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity(name = "khach_hang")
 public class Customer {
@@ -8,26 +15,39 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ma_khach_hang")
     private Integer id;
+
     @Column(name = "ho_ten")
+    @NotBlank(message = "name is not empty")
+    @Size(min = 5, max = 45, message = "length of name is 5-45")
     private String name;
+
     @Column(name = "ngay_sinh")
     private String birthday;
     @Column(name = "gioi_tinh")
     private Integer gender;
+
     @Column(name = "so_cmnd")
+    @IdCardConstraint
     private String idCard;
+
     @Column(name = "so_dien_thoai")
+    @PhoneConstraint
     private String phone;
+
     @Column(name = "email")
+    @EmailConstraint
     private String email;
+
     @Column(name = "dia_chi")
+    @NotBlank(message = "name is not empty")
     private String address;
 
     @ManyToOne
     @JoinColumn(name = "ma_loai_khach")
     private CustomerType customerType;
 
-    public Customer(Integer id, String name, String birthday, Integer gender, String idCard, String phone, String email, String address, CustomerType customerType) {
+    public Customer(Integer id, String name, String birthday, Integer gender, String idCard, String phone,
+                    String email, String address, CustomerType customerType) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
