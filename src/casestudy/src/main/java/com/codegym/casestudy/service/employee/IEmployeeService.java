@@ -8,9 +8,14 @@ import java.util.List;
 
 public interface IEmployeeService {
     List<Employee> getAll();
-    List<Employee> search(String name);
+
+    List<Employee> searchByName(String name);
+
     void save(Employee employee);
+
     void remove(Integer id);
+
     Employee findById(Integer id);
+
     Page<Employee> finAll(PageRequest of);
 }

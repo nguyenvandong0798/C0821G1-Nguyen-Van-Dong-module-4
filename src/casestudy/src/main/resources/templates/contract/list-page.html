@@ -24,13 +24,13 @@
                 <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/employee/list-page">Employee list</a>
+                <a class="nav-link" href="/contract/list-page">Customer list</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/employee/create">Create Employee</a>
+                <a class="nav-link" href="/contract/create">Create customer</a>
             </li>
         </ul>
-        <form class="d-flex" action="/employee/search" method="get">
+        <form class="d-flex" action="/contract/search" method="get">
             <input class="form-control me-2" type="search" placeholder="Search Name" aria-label="Search" name="name">
             <button class="btn btn-outline-warning" type="submit">Search</button>
         </form>
@@ -45,52 +45,48 @@
         <tr>
             <th>No</th>
             <th>ID</th>
-            <th>Name</th>
-            <th>Birth day</th>
-            <th>Id Card</th>
-            <th>Salary</th>
-            <th>Phone</th>
-            <th>Email</th>
-            <th>Address</th>
-            <th>Position</th>
-            <th>Skill</th>
-            <th>Department</th>
+            <th>Date input</th>
+            <th>Date output</th>
+            <th>gender</th>
+            <th>Deposit</th>
+            <th>Total</th>
+            <th>ID Employee</th>
+            <th>ID Customer</th>
+            <th>ID Service</th>
             <th></th>
             <th>More</th>
             <th></th>
         </tr>
-        <tr th:each="em, iter : ${employeePage}">
+        <tr th:each="con, iter : ${contractPage}">
             <td th:text="${iter.count}"></td>
-            <td th:text="${em.id}"></td>
-            <td th:text="${em.name}"></td>
-            <td th:text="${em.birthDay}"></td>
-            <td th:text="${em.idCard}"></td>
-            <td th:text="${em.salary}"></td>
-            <td th:text="${em.phone}"></td>
-            <td th:text="${em.email}"></td>
-            <td th:text="${em.address}"></td>
-            <td th:text="${em.position.namePosition}"></td>
-            <td th:text="${em.skill.nameSkill}"></td>
-            <td th:text="${em.department.nameDepartment}"></td>
+            <td th:text="${con.id}"></td>
+            <td th:text="${con.dateIn}"></td>
+            <td th:text="${con.dateOut}"></td>
+            <td th:text="${con.deposit}"></td>
+            <td th:text="${con.total}"></td>
+            <td th:text="${con.employee.id}"></td>
+            <td th:text="${con.customer.id}"></td>
+            <td th:text="${con.service.id}"></td>
 
             <!--            Request param-->
-            <td><a th:href="@{/employee/detail/(id = ${em.id})}"><i class="fas fa-info-circle"></i></a></td>
+            <td><a th:href="@{/contract/detail/(id = ${con.id})}"><i class="fas fa-info-circle"></i></a></td>
             <td>
                 <!-- Button trigger modal -->
                 <button type="button" class="btn btn-danger btn-delete" data-toggle="modal"
-                        data-target="#deleteModal" th:data-id="${em.id}" th:data-name="${em.name}">
+                        data-target="#deleteModal" th:data-id="${con.id}" th:data-name="${con.deposit}">
                     <i class="fas fa-trash-alt"></i>
                 </button>
-            </td>
-            <td><a th:href="@{edit/{id}(id=${em.getId()})}"><i class="fas fa-edit"></i></a></td>
-
+                </td>
+            <td><a th:href="@{edit/{id}(id=${con.getId()})}"><i class="fas fa-edit"></i></a></td>
         </tr>
+
+                Phân trang
         <tr>
             <td>
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" th:if="${employeePage.hasPrevious()}"
-                                                 th:href="@{/employee/list-page(page = ${employeePage.number - 1})}">
+                        <li class="page-item"><a class="page-link" th:if="${contractPage.hasPrevious()}"
+                                                 th:href="@{/contract/list-page(page = ${contractPage.number - 1})}">
                             Previous</a></li>
                     </ul>
                 </nav>
@@ -98,8 +94,8 @@
             <td>
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item" th:each="pageNo: ${#numbers.sequence(0,employeePage.totalPages - 1)}">
-                            <a class="page-link" th:href="@{/employee/list-page(page = ${pageNo})}" th:text="${pageNo}">
+                        <li class="page-item" th:each="pageNo: ${#numbers.sequence(0,contractPage.totalPages - 1)}">
+                            <a class="page-link" th:href="@{/contract/list-page(page = ${pageNo})}" th:text="${pageNo}">
                             </a></li>
                     </ul>
                 </nav>
@@ -107,36 +103,38 @@
             <td>
                 <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                        <li class="page-item"><a class="page-link" th:if="${employeePage.hasNext()}"
-                                                 th:href="@{/employee/list-page(page = ${employeePage.number + 1})}">
+                        <li class="page-item"><a class="page-link" th:if="${contractPage.hasNext()}"
+                                                 th:href="@{/contract/list-page(page = ${contractPage.number + 1})}">
                             Next</a></li>
                     </ul>
                 </nav>
             </td>
         </tr>
-        </table>
-        <!-- Modal -->
-        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-             aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <span>do you wuant to delete <span id="name-delete" class="text-danger"></span></span></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="text-danger">
-                            <a id="link-delete" class="btn btn-danger" href="">Delete</a></button>
-                    </div>
+
+    </table>
+
+    <!-- Modal -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <span>do you wuant to delete <span id="name-delete" class="text-danger"></span></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="text-danger">
+                        <a id="link-delete" class="btn btn-danger" href="">Delete</a></button>
                 </div>
             </div>
         </div>
+    </div>
     </thead>
 </div>
 </body>
@@ -148,7 +146,7 @@
         let id = this.dataset.id;
         let name = this.dataset.name;
         $('#name-delete').html(name);
-        $('#link-delete').attr("href", "http://localhost:8090/employee/delete?id="+id);
+        $('#link-delete').attr("href", "http://localhost:8090/contract/delete?id="+id);
     })
 </script>
 </html>

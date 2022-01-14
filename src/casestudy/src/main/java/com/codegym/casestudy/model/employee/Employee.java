@@ -1,6 +1,9 @@
 package com.codegym.casestudy.model.employee;
 
+import com.codegym.casestudy.model.contract.Contract;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity(name = "nhan_vien")
 public class Employee {
@@ -12,7 +15,7 @@ public class Employee {
     private String name;
     @Column(name = "ngay_sinh")
     private String birthDay;
-    @Column(name = "co_cmnd")
+    @Column(name = "so_cmnd")
     private String idCard;
     @Column(name = "luong")
     private String salary;
@@ -34,6 +37,17 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "ma_bo_phan")
     private Department department;
+
+    @OneToMany(mappedBy = "employee", cascade = CascadeType.ALL)
+    private Set<Contract> contracts;
+
+    public Set<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(Set<Contract> contracts) {
+        this.contracts = contracts;
+    }
 
     public Employee() {
     }

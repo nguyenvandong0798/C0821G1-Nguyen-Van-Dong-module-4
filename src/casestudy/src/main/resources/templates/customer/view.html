@@ -30,7 +30,7 @@
                 <a class="nav-link" href="/customer/create">Create customer</a>
             </li>
         </ul>
-        <form class="d-flex" action="/customer/search" method="get">
+        <form class="d-flex" action="#" method="get">
             <input class="form-control me-2" type="search" placeholder="Search Name" aria-label="Search" name="name">
             <button class="btn btn-outline-warning" type="submit">Search</button>
         </form>
@@ -57,7 +57,7 @@
             <th>More</th>
             <th></th>
         </tr>
-        <tr th:each="cus, iter : ${customerPage}">
+        <tr th:each="cus, iter : ${customer}">
             <td th:text="${iter.count}"></td>
             <td th:text="${cus.id}"></td>
             <td th:text="${cus.name}"></td>
@@ -74,71 +74,10 @@
 
             <!--            Request param-->
             <td><a th:href="@{/customer/detail/(id = ${cus.id})}"><i class="fas fa-info-circle"></i></a></td>
-            <td>
-                <!-- Button trigger modal -->
-                <button type="button" class="btn btn-danger btn-delete" data-toggle="modal"
-                        data-target="#deleteModal" th:data-id="${cus.id}" th:data-name="${cus.name}">
-                    <i class="fas fa-trash-alt"></i>
-                </button>
-                </td>
             <td><a th:href="@{edit/{id}(id=${cus.getId()})}"><i class="fas fa-edit"></i></a></td>
-        </tr>
-
-        <!--        Phân trang-->
-        <tr>
-            <td>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" th:if="${customerPage.hasPrevious()}"
-                                                 th:href="@{/customer/list-page(page = ${customerPage.number - 1})}">
-                            Previous</a></li>
-                    </ul>
-                </nav>
-            </td>
-            <td>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item" th:each="pageNo: ${#numbers.sequence(0,customerPage.totalPages - 1)}">
-                            <a class="page-link" th:href="@{/customer/list-page(page = ${pageNo})}" th:text="${pageNo}">
-                            </a></li>
-                    </ul>
-                </nav>
-            </td>
-            <td>
-                <nav aria-label="Page navigation example">
-                    <ul class="pagination">
-                        <li class="page-item"><a class="page-link" th:if="${customerPage.hasNext()}"
-                                                 th:href="@{/customer/list-page(page = ${customerPage.number + 1})}">
-                            Next</a></li>
-                    </ul>
-                </nav>
-            </td>
-        </tr>
+            <td><a th:href="@{delete/{id}(id=${cus.getId()})}"><i class="fas fa-trash"></i></a></td>
 
     </table>
-
-    <!-- Modal -->
-    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-         aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <span>do you wuant to delete <span id="name-delete" class="text-danger"></span></span></p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="text-danger">
-                        <a id="link-delete" class="btn btn-danger" href="">Delete</a></button>
-                </div>
-            </div>
-        </div>
-    </div>
     </thead>
 </div>
 </body>
@@ -146,11 +85,5 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    $(".btn-delete").click(function () {
-        let id = this.dataset.id;
-        let name = this.dataset.name;
-        $('#name-delete').html(name);
-        $('#link-delete').attr("href", "http://localhost:8090/customer/delete?id="+id);
-    })
 </script>
 </html>

@@ -1,5 +1,6 @@
 package com.codegym.casestudy.controller;
 
+import com.codegym.casestudy.model.customer.Customer;
 import com.codegym.casestudy.model.employee.Employee;
 import com.codegym.casestudy.service.employee.IDepartmentService;
 import com.codegym.casestudy.service.employee.IEmployeeService;
@@ -13,6 +14,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Controller
 @RequestMapping("employee")
@@ -43,6 +46,12 @@ public class EmployeeController {
         iEmployeeService.remove(id);
         model.addAttribute("employee", iEmployeeService.getAll());
         return "employee/list-page";
+    }
+
+    @GetMapping("/delete")
+    public String delete(@RequestParam("id") Integer id){
+        iEmployeeService.remove(id);
+        return "redirect:/employee/list-page";
     }
 
     @GetMapping("detail")
@@ -81,6 +90,13 @@ public class EmployeeController {
     public String create(@ModelAttribute(value = "employee") Employee employee){
         iEmployeeService.save(employee);
         return "employee/list-page";
+    }
+
+    @GetMapping(value = "/search")
+    public String search (@RequestParam("name") String name, Model model){
+        List<Employee> employees= iEmployeeService.searchByName(name);
+        model.addAttribute("employee", employees);
+        return "employee/view";
     }
 
 }
